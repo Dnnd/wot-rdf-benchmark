@@ -1,0 +1,102 @@
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix schema: <http://schema.org/> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix wotsec: <https://www.w3.org/2019/wot/security#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix jsonschema: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix tdx: <https://tdx.agentlab.ru/#> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix ex: <https://example.agentlab.ru/#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+
+ex:TemperatureSensor_Model a tdx:ThingModel;
+                     rdfs:label "Модель Датчика Температуры"@ru;
+                     td:hasPropertyAffordance ex:Temperature_Model.
+
+ex:Temperature_Model a td:PropertyAffordance;
+               rdfs:label "Свойство температуры модели датчика"@ru.
+
+ex:TemperatureSensor_1 a td:Thing;
+rdfs:label "Датчик Температуры #1"@ru;
+           td:hasPropertyAffordance ex:Temperature_1.
+
+ex:Temperature_1 a td:PropertyAffordance;
+   rdfs:label "Температура датчика #1"@ru;
+   tdx:describedBy ex:Temperature_Model.
+
+ex:TemperatureSensor_2 a td:Thing;
+rdfs:label "Датчик Температуры #2"@ru;
+           td:hasPropertyAffordance ex:Temperature_2.
+
+ex:Temperature_2 a td:PropertyAffordance;
+   rdfs:label "Температура датчика #2"@ru;
+   tdx:describedBy ex:Temperature_Model.
+
+ex:TemperatureSensor_3 a td:Thing;
+rdfs:label "Датчик Температуры #3"@ru;
+           td:hasPropertyAffordance ex:Temperature_3.
+
+ex:Temperature_3 a td:PropertyAffordance;
+   rdfs:label "Температура датчика #3"@ru;
+   tdx:describedBy ex:Temperature_Model.
+
+ex:TemperatureSensor_4 a td:Thing;
+rdfs:label "Датчик Температуры #4"@ru;
+           td:hasPropertyAffordance ex:Temperature_4.
+
+ex:Temperature_4 a td:PropertyAffordance;
+   rdfs:label "Температура датчика #4"@ru;
+   tdx:describedBy ex:Temperature_Model.
+
+ex:TemperatureSensor_5 a td:Thing;
+rdfs:label "Датчик Температуры #5"@ru;
+           td:hasPropertyAffordance ex:Temperature_5.
+
+ex:Temperature_5 a td:PropertyAffordance;
+   rdfs:label "Температура датчика #5"@ru;
+   tdx:describedBy ex:Temperature_Model.
+
+ex:TemperatureSensor_6 a td:Thing;
+rdfs:label "Датчик Температуры #6"@ru;
+           td:hasPropertyAffordance ex:Temperature_6.
+
+ex:Temperature_6 a td:PropertyAffordance;
+   rdfs:label "Температура датчика #6"@ru;
+   tdx:describedBy ex:Temperature_Model.
+
+ex:TemperatureSensor_7 a td:Thing;
+rdfs:label "Датчик Температуры #7"@ru;
+           td:hasPropertyAffordance ex:Temperature_7.
+
+ex:Temperature_7 a td:PropertyAffordance;
+   rdfs:label "Температура датчика #7"@ru;
+   tdx:describedBy ex:Temperature_Model.
+
+ex:TemperatureSensor_8 a td:Thing;
+rdfs:label "Датчик Температуры #8"@ru;
+           td:hasPropertyAffordance ex:Temperature_8.
+
+ex:Temperature_8 a td:PropertyAffordance;
+   rdfs:label "Температура датчика #8"@ru;
+   tdx:describedBy ex:Temperature_Model.
+
+ex:TemperatureSensor_9 a td:Thing;
+rdfs:label "Датчик Температуры #9"@ru;
+           td:hasPropertyAffordance ex:Temperature_9.
+
+ex:Temperature_9 a td:PropertyAffordance;
+   rdfs:label "Температура датчика #9"@ru;
+   tdx:describedBy ex:Temperature_Model.
+
+ex:TemperatureSensor_10 a td:Thing;
+rdfs:label "Датчик Температуры #10"@ru;
+           td:hasPropertyAffordance ex:Temperature_10.
+
+ex:Temperature_10 a td:PropertyAffordance;
+   rdfs:label "Температура датчика #10"@ru;
+   tdx:describedBy ex:Temperature_Model.
+

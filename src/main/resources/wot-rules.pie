@@ -1,0 +1,27 @@
+Prefices
+{
+    rdf  :  http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    rdfs :  http://www.w3.org/2000/01/rdf-schema#
+    owl  :  http://www.w3.org/2002/07/owl#
+    xsd  :  http://www.w3.org/2001/XMLSchema#
+    td   :  https://www.w3.org/2019/wot/td#
+    tdx  :  https://tdx.agentlab.ru/#
+    dct  :  http://purl.org/dc/terms/
+    ex   :  https://example.agentlab.ru/#
+    saref : https://w3id.org/saref#
+    sosa : http://www.w3.org/ns/sosa/
+}
+Axioms
+{
+
+}
+Rules
+{
+Id: madeBySensor
+    thing <rdf:type> <td:Thing>
+    thing <td:hasPropertyAffordance> affordance
+    observation <rdf:type> <sosa:Observation>
+    observation <tdx:describedByAffordance> affordance
+    -------------------------------
+    observation <sosa:madeBySensor> thing
+}

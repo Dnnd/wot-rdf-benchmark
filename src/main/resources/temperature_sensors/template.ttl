@@ -1,0 +1,33 @@
+@prefix td: <https://www.w3.org/2019/wot/td#> .
+@prefix schema: <http://schema.org/> .
+@prefix hctl: <https://www.w3.org/2019/wot/hypermedia#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix wotsec: <https://www.w3.org/2019/wot/security#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix htv: <http://www.w3.org/2011/http#> .
+@prefix jsonschema: <https://www.w3.org/2019/wot/json-schema#> .
+@prefix tdx: <https://tdx.agentlab.ru/#> .
+@prefix saref: <https://w3id.org/saref#> .
+@prefix ex: <https://example.agentlab.ru/#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+
+ex:TemperatureSensor_Model a tdx:ThingModel;
+                     rdfs:label "Модель Датчика Температуры"@ru;
+                     td:hasPropertyAffordance ex:Temperature_Model.
+
+ex:Temperature_Model a td:PropertyAffordance;
+               rdfs:label "Свойство температуры модели датчика"@ru.
+
+{{ range $i := (seq $.Env.SENSORS) -}}
+
+ex:TemperatureSensor_{{$i}} a td:Thing;
+rdfs:label "Датчик Температуры #{{$i}}"@ru;
+           td:hasPropertyAffordance ex:Temperature_{{$i}}.
+
+ex:Temperature_{{$i}} a td:PropertyAffordance;
+   rdfs:label "Температура датчика #{{$i}}"@ru;
+   tdx:describedBy ex:Temperature_Model.
+
+{{end -}}

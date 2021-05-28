@@ -1,0 +1,22 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rep: <http://www.openrdf.org/config/repository#>.
+@prefix sr: <http://www.openrdf.org/config/repository/sail#>.
+@prefix sail: <http://www.openrdf.org/config/sail#>.
+@prefix owlim: <http://www.ontotext.com/trree/owlim#>.
+@prefix stct: <http://semanticturkey.uniroma2.it/config/sail/changetracker#>.
+
+[] a rep:Repository ;
+        rep:repositoryID "graphdb-repo" ;
+        rdfs:label "GraphDB Getting Started" ;
+        rep:repositoryImpl [
+        rep:repositoryType "openrdf:SailRepository" ;
+            sr:sailImpl [
+                sail:sailType "graphdb:FreeSail" ;
+                owlim:storage-folder "storage" ;
+                owlim:base-URL "http://example.org/owlim#" ;
+                owlim:repository-type "file-repository" ;
+                owlim:imports "" ;
+                owlim:defaultNS ""
+            ]
+        ].
+
